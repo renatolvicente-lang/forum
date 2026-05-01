@@ -1,9 +1,34 @@
 const USUARIO_CORRETO = "admin";
 const SENHA_CORRETA = "1234";
+const USERS_STORAGE_KEY = "mm_forum_users";
 
 if (localStorage.getItem("mm_forum_auth") === "1") {
     window.location.href = "home.html";
 }
+
+function readUsers() {
+    try {
+        const raw = localStorage.getItem(USERS_STORAGE_KEY);
+        const obj = raw ? JSON.parse(raw) : {};
+        return obj && typeof obj === "object" ? obj : {};
+    } catch {
+        return {};
+    }
+}
+
+function writeUsers(users) {
+    localStorage.setItem(USERS_STORAGE_KEY, JSON.stringify(users));
+}
+
+function seedDefaultUser() {
+    const users = readUsers();
+    if (!users[USUARIO_CORRETO]) {
+        users[USUARIO_CORRETO] = SENHA_CORRETA;
+        writeUsers(users);
+    }
+}
+
+seedDefaultUser();
 
 function setAlert(targetId, type, message) {
     const el = document.getElementById(targetId);
@@ -47,8 +72,15 @@ function validarLogin(event) {
         return;
     }
 
-    if (usuario !== USUARIO_CORRETO || senha !== SENHA_CORRETA) {
-        setAlert("mensagemLogin", "danger", "Usuário ou senha incorretos.");
+    const users = readUsers();
+    const senhaCadastrada = users[usuario];
+    if (!senhaCadastrada) {
+        setAlert("mensagemLogin", "danger", "Usuário não cadastrado. Clique em “Cadastre-se”.");
+        return;
+    }
+
+    if (senha !== senhaCadastrada) {
+        setAlert("mensagemLogin", "danger", "Senha incorreta.");
         return;
     }
 
@@ -75,14 +107,24 @@ function validarCadastro(event) {
         return;
     }
 
-    setAlert(
-        "mensagemCadastro",
-        "success",
-        'Cadastro simulado com sucesso! Para entrar, use o login fixo do projeto: "admin" / "1234".',
-    );
+    const users = readUsers();
+    if (users[novoUsuario]) {
+        setAlert("mensagemCadastro", "danger", "Este usuário já existe. Tente outro.");
+        return;
+    }
+
+    users[novoUsuario] = novaSenha;
+    writeUsers(users);
+
+    setAlert("mensagemCadastro", "success", "Cadastro realizado! Agora você já pode entrar com suas credenciais.");
 
     document.getElementById("Cadastro")?.reset();
-    setTimeout(() => alternarTelaAuth("login"), 800);
+    setTimeout(() => {
+        alternarTelaAuth("login");
+        const loginUser = document.getElementById("usuario");
+        if (loginUser) loginUser.value = novoUsuario;
+        document.getElementById("senha")?.focus();
+    }, 600);
 }
 
 document.getElementById("Login")?.addEventListener("submit", validarLogin);
@@ -99,3 +141,4 @@ document.getElementById("linkIrLogin")?.addEventListener("click", (e) => {
 });
 
 window.alternarTelaAuth = alternarTelaAuth;
+
