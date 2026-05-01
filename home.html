@@ -2,173 +2,185 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Fórum MegaMan</title>
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Início • Fórum Mega Man</title>
+    <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/style.css">
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/style.css" />
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-custom bg-custom navbar-dark sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="home.html">
-                <img src="https://upload.wikimedia.org/wikipedia/pt/d/de/Mega_man_logo.png" alt="Logo" style="height: 40px;">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="home.html">Início</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="history.html">História</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="news.html">Notícias</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="forums.html">Discussões</a>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                    <button class="btn btn-outline-light" type="submit">Buscar</button>
-                </form>
-            </div>
-        </div>
-    </nav>
-
-    <main class="container py-5">
-        <section class="text-center mb-5 bg-card-custom rounded-4 p-4 shadow">
-            <h1 class="display-4 text-primary mb-3">Bem-vindo ao Fórum MegaMan</h1>
-            <p class="lead">
-                Este é o seu destino definitivo para tudo sobre a lendária franquia MegaMan da Capcom!
-                Aqui você encontrará as últimas notícias sobre juegos, a história completa dosRobo Masters e NetNavi,
-                além de poder participar de discussões com outros fãs. Explore nosso conteúdo e junte-se à comunidade!
-            </p>
-        </section>
-
-        <section class="mb-5">
-            <h2 class="text-white text-shadow mb-4">Notícias Recentes</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card h-100 card-hover">
-                        <img src="https://www.adrenaline.com.br/wp-content/uploads/2025/09/Pragmata-Jogo-Secreto-Mega-Man-Capcom.jpg" class="card-img-top" alt="Pragmata">
-                        <div class="card-body">
-                            <h5 class="card-title">Pragmata Não É Jogo Secreto</h5>
-                            <p class="card-text">Capcom esclarece boatos sobre novo jogo.</p>
-                            <a href="news.html" class="btn btn-primary">Leia mais...</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 card-hover">
-                        <img src="https://static.wikia.nocookie.net/megamangame/images/1/10/MM12_cover.jpg/revision/latest?cb=20220119015631&path-prefix=pt-br" class="card-img-top" alt="Mega Man 12">
-                        <div class="card-body">
-                            <h5 class="card-title">Mega Man 12 Anunciado</h5>
-                            <p class="card-text">Novo jogo da saga principais confirmado.</p>
-                            <a href="news.html" class="btn btn-primary">Leia mais...</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 card-hover">
-                        <img src="https://static.wikia.nocookie.net/megamangame/images/f/fe/X_em_X_DiVE.png/revision/latest?cb=20200704180732&path-prefix=pt-br" class="card-img-top" alt="Mega Man X DiVE">
-                        <div class="card-body">
-                            <h5 class="card-title">Mega Man X DiVE</h5>
-                            <p class="card-text">Novo jogo mobile confirmado para 2026.</p>
-                            <a href="news.html" class="btn btn-primary">Leia mais...</a>
-                        </div>
+    <div class="page-scrim">
+        <nav class="navbar navbar-expand-lg navbar-custom bg-custom navbar-dark sticky-top">
+            <div class="container">
+                <a class="navbar-brand fw-semibold" href="home.html">Mega Man</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="home.html">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="history.html">História</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="news.html">Notícias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="forums.html">Discussões</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex gap-2 align-items-center">
+                        <span class="text-white-50 small">Olá, <span id="navUser" class="text-white">Visitante</span></span>
+                        <a class="btn btn-outline-light btn-sm" href="#" id="btnLogout">Sair</a>
                     </div>
                 </div>
             </div>
-        </section>
+        </nav>
 
-        <section class="mb-5">
-            <h2 class="text-white text-shadow mb-4">História dos Personagens</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card h-100 card-hover">
-                        <img src="https://static.wikia.nocookie.net/megamangame/images/e/e1/Mega_Man.png/revision/latest?cb=20220106232541&path-prefix=pt-br" class="card-img-top" alt="Mega Man Classic">
-                        <div class="card-body">
-                            <h5 class="card-title">Mega Man Classic</h5>
-                            <p class="card-text">O herói original que começou tudo.</p>
-                            <a href="history.html" class="btn btn-primary">Saiba mais...</a>
+        <main class="container py-5">
+            <section class="text-center mb-5 bg-card-custom rounded-4 p-4 p-md-5 shadow">
+                <h1 class="display-6 text-primary mb-3">Bem-vindo ao Fórum Mega Man</h1>
+                <p class="lead mb-0">
+                    Este site reúne conteúdo temático da franquia <span class="fw-semibold">Mega Man</span>:
+                    uma página de notícias e destaques, um resumo da história de personagens/eras importantes e
+                    um espaço de discussões (simulando tópicos de fórum). Use o menu para navegar — ou comece pelos
+                    cards mais recentes abaixo.
+                </p>
+            </section>
+
+            <section class="mb-5">
+                <div class="d-flex justify-content-between align-items-end mb-3">
+                    <h2 class="text-white text-shadow mb-0">Notícias & Destaques</h2>
+                    <a class="link-light small" href="news.html">Ver tudo</a>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 card-hover">
+                            <div class="card-body">
+                                <span class="badge text-bg-primary mb-2">Destaque</span>
+                                <h5 class="card-title mb-2">Mega Man: Dual Override (anúncio)</h5>
+                                <p class="card-text text-muted mb-3">Novo jogo principal confirmado para 2027.</p>
+                                <a href="news.html#news-dual-override-anuncio" class="btn btn-primary">Ler notícia</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 card-hover">
+                            <div class="card-body">
+                                <span class="badge text-bg-dark mb-2">Comunidade</span>
+                                <h5 class="card-title mb-2">Concurso de Robot Masters (finalistas)</h5>
+                                <p class="card-text text-muted mb-3">Capcom divulga os seis designs finalistas.</p>
+                                <a href="news.html#news-dual-override-concurso" class="btn btn-primary">Ler notícia</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 card-hover">
+                            <div class="card-body">
+                                <span class="badge text-bg-secondary mb-2">Lançamento</span>
+                                <h5 class="card-title mb-2">MEGA MAN X DiVE Offline</h5>
+                                <p class="card-text text-muted mb-3">Versão offline do DiVE para PC e mobile.</p>
+                                <a href="news.html#news-xdive-offline" class="btn btn-primary">Ler notícia</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card h-100 card-hover">
-                        <img src="https://static.wikia.nocookie.net/megamangame/images/b/b3/MegamanXRender.png/revision/latest?cb=20210427002739&path-prefix=pt-br" class="card-img-top" alt="Mega Man X">
-                        <div class="card-body">
-                            <h5 class="card-title">Mega Man X</h5>
-                            <p class="card-text">O sucessor evolutionário.</p>
-                            <a href="history.html" class="btn btn-primary">Saiba mais...</a>
+            </section>
+
+            <section class="mb-5">
+                <div class="d-flex justify-content-between align-items-end mb-3">
+                    <h2 class="text-white text-shadow mb-0">História (Personagens/Eras)</h2>
+                    <a class="link-light small" href="history.html">Ver tudo</a>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 card-hover">
+                            <div class="card-body">
+                                <h5 class="card-title mb-2">Mega Man (Classic)</h5>
+                                <p class="card-text text-muted mb-3">Rock, Dr. Light, Dr. Wily e os Robot Masters.</p>
+                                <a href="history.html#hist-classic" class="btn btn-primary">Saiba mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 card-hover">
+                            <div class="card-body">
+                                <h5 class="card-title mb-2">Mega Man X</h5>
+                                <p class="card-text text-muted mb-3">A era dos Reploids, Mavericks e Sigma.</p>
+                                <a href="history.html#hist-x" class="btn btn-primary">Saiba mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 card-hover">
+                            <div class="card-body">
+                                <h5 class="card-title mb-2">Zero</h5>
+                                <p class="card-text text-muted mb-3">O guerreiro lendário e sua saga própria.</p>
+                                <a href="history.html#hist-zero" class="btn btn-primary">Saiba mais</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card h-100 card-hover">
-                        <img src="https://static.wikia.nocookie.net/megamangame/images/d/d5/Mega_Man_Zero.png/revision/latest?cb=20191024191836&path-prefix=pt-br" class="card-img-top" alt="Zero">
-                        <div class="card-body">
-                            <h5 class="card-title">Zero</h5>
-                            <p class="card-text">O lendário guerreiro replóide.</p>
-                            <a href="history.html" class="btn btn-primary">Saiba mais...</a>
+            </section>
+
+            <section class="mb-0">
+                <div class="d-flex justify-content-between align-items-end mb-3">
+                    <h2 class="text-white text-shadow mb-0">Discussões Recentes</h2>
+                    <a class="link-light small" href="forums.html">Ver tudo</a>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 card-hover">
+                            <div class="card-body">
+                                <span class="badge text-bg-danger mb-2">Tópico</span>
+                                <h5 class="card-title mb-2">Qual é o melhor jogo Classic?</h5>
+                                <p class="card-text text-muted mb-3">Opiniões sobre os clássicos do NES.</p>
+                                <a href="forums.html#forum-melhor-classic" class="btn btn-danger">Participar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 card-hover">
+                            <div class="card-body">
+                                <span class="badge text-bg-danger mb-2">Tópico</span>
+                                <h5 class="card-title mb-2">Melhor cena ou momento</h5>
+                                <p class="card-text text-muted mb-3">Do Classic ao X, qual te marcou?</p>
+                                <a href="forums.html#forum-melhor-momento" class="btn btn-danger">Participar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 card-hover">
+                            <div class="card-body">
+                                <span class="badge text-bg-danger mb-2">Tópico</span>
+                                <h5 class="card-title mb-2">Armas e fraquezas</h5>
+                                <p class="card-text text-muted mb-3">Dicas de ordem de chefes e counters.</p>
+                                <a href="forums.html#forum-armas-e-fraquezas" class="btn btn-danger">Participar</a>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </section>
+        </main>
+
+        <footer class="bg-custom text-white text-center py-4">
+            <div class="container">
+                <p class="mb-0">&copy; 2026 Fórum Mega Man • Projeto educacional</p>
             </div>
-        </section>
-
-        <section class="mb-5">
-            <h2 class="text-white text-shadow mb-4">Discussões Recentes</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card h-100 card-hover">
-                        <div class="card-body">
-                            <h5 class="card-title">Qual o Melhor Jogo?</h5>
-                            <p class="card-text">Vote no seu favorito da saga Classic.</p>
-                            <a href="forums.html" class="btn btn-danger">Participar...</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 card-hover">
-                        <div class="card-body">
-                            <h5 class="card-title">Melhor Cena</h5>
-                            <p class="card-text">Qual foi a cena mais marcante?</p>
-                            <a href="forums.html" class="btn btn-danger">Participar...</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 card-hover">
-                        <div class="card-body">
-                            <h5 class="card-title">Cheats e Estrategias</h5>
-                            <p class="card-text">Compartilhe suas estratégias.</p>
-                            <a href="forums.html" class="btn btn-danger">Participar...</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-custom text-white text-center py-4">
-        <div class="container">
-            <p class="mb-0">&copy; 2026 Fórum MegaMan - Todos os direitos reservados</p>
-        </div>
-    </footer>
+        </footer>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-+mNKM1zDJcZ6A6yVs3zLaZ9uKg9yG9O2IRc1AIV5U4G8cFU28qFtX3U5dVdG3oGkcbe1cKh2fEV8x6w6"
         crossorigin="anonymous"></script>
+    <script src="scripts/auth.js"></script>
 </body>
 
 </html>
+

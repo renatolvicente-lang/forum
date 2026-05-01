@@ -2,52 +2,108 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Fórum MegaMan</title>
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login • Fórum Mega Man</title>
+    <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/style.css">
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/style.css" />
 </head>
 
 <body>
-    <header class="text-center py-4">
-        <img src="https://upload.wikimedia.org/wikipedia/pt/d/de/Mega_man_logo.png" alt="MegaMan Logo" class="img-fluid" style="max-width: 300px;">
-    </header>
+    <div class="page-scrim">
+        <header class="container py-5 text-center text-white">
+            <h1 class="display-5 fw-bold mb-2 text-shadow">Fórum Mega Man</h1>
+            <p class="lead mb-0">Entre para acessar as páginas do fórum.</p>
+        </header>
 
-    <main>
-        <div class="container d-flex justify-content-center align-items-center" style="min-height: 60vh;">
-            <div class="card shadow-lg p-4 rounded-4 bg-card-custom" style="width: 100%; max-width: 400px;">
-                <h1 class="text-center mb-4">Login</h1>
+        <main class="container pb-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-5">
+                    <div class="card shadow-lg rounded-4 bg-card-custom">
+                        <div class="card-body p-4 p-md-5">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <h2 class="h4 mb-1" id="authTitle">Login</h2>
+                                    <p class="text-muted small mb-0">Usuário e senha fixos: <span class="fw-semibold">admin /
+                                            1234</span></p>
+                                </div>
+                                <span class="badge text-bg-primary">Bootstrap</span>
+                            </div>
 
-                <div id="mensagemErro" class="alert alert-danger d-none" role="alert"></div>
-                <div id="mensagemSucesso" class="alert alert-success d-none" role="alert"></div>
+                            <div id="mensagemLogin" class="alert d-none" role="alert"></div>
+                            <div id="mensagemCadastro" class="alert d-none" role="alert"></div>
 
-                <form id="Login">
-                    <div class="mb-3">
-                        <label class="form-label" for="usuario">Usuário</label>
-                        <input class="form-control" type="text" name="usuario" id="usuario" placeholder="Digite seu usuário">
+                            <div id="loginView">
+                                <form id="Login" novalidate>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="usuario">Usuário</label>
+                                        <input class="form-control" type="text" id="usuario" placeholder="Digite seu usuário"
+                                            autocomplete="username" />
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label" for="senha">Senha</label>
+                                        <input class="form-control" type="password" id="senha" placeholder="Digite sua senha"
+                                            autocomplete="current-password" />
+                                    </div>
+
+                                    <button class="btn btn-primary w-100" type="submit">Entrar</button>
+
+                                    <div class="text-center mt-3">
+                                        <small class="text-muted">
+                                            Não possui conta?
+                                            <a href="#" id="linkIrCadastro">Cadastre-se</a>
+                                        </small>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div id="signupView" class="d-none">
+                                <form id="Cadastro" novalidate>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="cadUsuario">Usuário</label>
+                                        <input class="form-control" type="text" id="cadUsuario" placeholder="Crie um usuário"
+                                            autocomplete="username" />
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label" for="cadSenha">Senha</label>
+                                        <input class="form-control" type="password" id="cadSenha" placeholder="Crie uma senha"
+                                            autocomplete="new-password" />
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label" for="cadConfirmarSenha">Confirmar senha</label>
+                                        <input class="form-control" type="password" id="cadConfirmarSenha"
+                                            placeholder="Repita a senha" autocomplete="new-password" />
+                                    </div>
+
+                                    <button class="btn btn-success w-100" type="submit">Cadastrar</button>
+
+                                    <div class="text-center mt-3">
+                                        <small class="text-muted">
+                                            Já possui conta?
+                                            <a href="#" id="linkIrLogin">Entrar</a>
+                                        </small>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="mb-3">
-                        <label class="form-label" for="senha">Senha</label>
-                        <input class="form-control" type="password" name="senha" id="senha" placeholder="Digite sua senha">
-                    </div>
-
-                    <div class="mb-3 text-center">
-                        <small class="text-muted">Não possui conta? <a href="#">Cadastre-se</a></small>
-                    </div>
-
-                    <button class="btn btn-primary w-100" type="submit">Entrar</button>
-                </form>
+                    <p class="text-center text-white-50 small mt-3 mb-0">
+                        Atividade SENAI • HTML/CSS/JS + Bootstrap
+                    </p>
+                </div>
             </div>
-        </div>
-    </main>
+        </main>
 
-    <footer class="text-center py-3 text-muted">
-        <small>&copy; 2026 Fórum MegaMan - Todos os direitos reservados</small>
-    </footer>
+        <footer class="text-center py-4 text-white-50">
+            <small>&copy; 2026 Fórum Mega Man • Projeto educacional</small>
+        </footer>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-+mNKM1zDJcZ6A6yVs3zLaZ9uKg9yG9O2IRc1AIV5U4G8cFU28qFtX3U5dVdG3oGkcbe1cKh2fEV8x6w6"
@@ -56,3 +112,4 @@
 </body>
 
 </html>
+
