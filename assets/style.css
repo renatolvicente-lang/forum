@@ -1,11 +1,40 @@
-*{
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body {
+    background-image: url('background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
 }
 
-body{
-    background-color: #007ccf54;
+.bg-custom {
+    background-color: rgba(33, 37, 41, 0.95) !important;
 }
-#fixa{
-    width: 400px;
+
+.bg-card-custom {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.btn-danger {
+    background-color: #8B0000;
+    border-color: #8B0000;
+}
+
+.btn-danger:hover {
+    background-color: #660000;
+    border-color: #660000;
+}
+
+.navbar-custom {
+    background-color: rgba(33, 37, 41, 0.95) !important;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.card-hover:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }

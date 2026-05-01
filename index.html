@@ -1,48 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forum MegaMan</title>
-    <link rel="shortcut icon" href="assets/favicon/favicon (1).ico" type="image/x-icon">
+    <title>Login - Fórum MegaMan</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
-    <header class="text-center">
-        <img src="https://upload.wikimedia.org/wikipedia/pt/d/de/Mega_man_logo.png" alt="titulo-login">
+    <header class="text-center py-4">
+        <img src="https://upload.wikimedia.org/wikipedia/pt/d/de/Mega_man_logo.png" alt="MegaMan Logo" class="img-fluid" style="max-width: 300px;">
     </header>
+
     <main>
-        <div class="container d-flex text-center justify-content-center align-items-center vh-50">
-            <div class="card shadow p-4 rounded-5" style="width : 100%; max-width: 400px;">
+        <div class="container d-flex justify-content-center align-items-center" style="min-height: 60vh;">
+            <div class="card shadow-lg p-4 rounded-4 bg-card-custom" style="width: 100%; max-width: 400px;">
+                <h1 class="text-center mb-4">Login</h1>
 
+                <div id="mensagemErro" class="alert alert-danger d-none" role="alert"></div>
+                <div id="mensagemSucesso" class="alert alert-success d-none" role="alert"></div>
 
-                <h1><span id="titulo">Login</span></h1>
+                <form id="Login">
+                    <div class="mb-3">
+                        <label class="form-label" for="usuario">Usuário</label>
+                        <input class="form-control" type="text" name="usuario" id="usuario" placeholder="Digite seu usuário">
+                    </div>
 
-                <form action="" id="Login">
-                    <div class=" mb-3" id="c-email">
-                        <label class="col-sm-2 col-form-label" for="email">Email</label>
-                        <input class="form-label w-50 p-1 h-25" type="email" name="email" id="email">
+                    <div class="mb-3">
+                        <label class="form-label" for="senha">Senha</label>
+                        <input class="form-control" type="password" name="senha" id="senha" placeholder="Digite sua senha">
                     </div>
-                    <div class="mb-3" id="c-senha">
-                        <label class="col-sm-2 col-form-label" for="senha">Senha</label>
-                        <input class="form-label w-50 p-1 h-25" type="password" name="senha" id="senha">
+
+                    <div class="mb-3 text-center">
+                        <small class="text-muted">Não possui conta? <a href="#">Cadastre-se</a></small>
                     </div>
-                    <div class="toggle">
-                        <p>Não possui conta?<a href="#"> Cadastre-se</a></p>
-                    </div>
-                    <button class="btn btn-outline-primary" type="submit">Enviar</button>
+
+                    <button class="btn btn-primary w-100" type="submit">Entrar</button>
                 </form>
             </div>
         </div>
     </main>
-    <footer>
 
+    <footer class="text-center py-3 text-muted">
+        <small>&copy; 2026 Fórum MegaMan - Todos os direitos reservados</small>
     </footer>
-    <img id="fixa" class="position-fixed" src="https://static.wikia.nocookie.net/megamangame/images/f/fe/X_em_X_DiVE.png/revision/latest?cb=20200704180732&path-prefix=pt-br" alt="">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-+mNKM1zDJcZ6A6yVs3zLaZ9uKg9yG9O2IRc1AIV5U4G8cFU28qFtX3U5dVdG3oGkcbe1cKh2fEV8x6w6"
+        crossorigin="anonymous"></script>
     <script src="scripts/script.js"></script>
 </body>
 
